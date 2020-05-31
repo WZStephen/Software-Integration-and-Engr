@@ -1,0 +1,7 @@
+D:\Projects\CSE446_Project1\Assignment1\Assignment1_Q3&Q4\ConsoleApp1\Self-Hosting-Client\bin\Debug\Self-Hosting-Client.exe.config
+D:\Projects\CSE446_Project1\Assignment1\Assignment1_Q3&Q4\ConsoleApp1\Self-Hosting-Client\bin\Debug\Self-Hosting-Client.exe
+D:\Projects\CSE446_Project1\Assignment1\Assignment1_Q3&Q4\ConsoleApp1\Self-Hosting-Client\bin\Debug\Self-Hosting-Client.pdb
+D:\Projects\CSE446_Project1\Assignment1\Assignment1_Q3&Q4\ConsoleApp1\Self-Hosting-Client\obj\Debug\Self-Hosting-Client.csprojAssemblyReference.cache
+D:\Projects\CSE446_Project1\Assignment1\Assignment1_Q3&Q4\ConsoleApp1\Self-Hosting-Client\obj\Debug\Self-Hosting-Client.csproj.CoreCompileInputs.cache
+D:\Projects\CSE446_Project1\Assignment1\Assignment1_Q3&Q4\ConsoleApp1\Self-Hosting-Client\obj\Debug\Self-Hosting-Client.exe
+D:\Projects\CSE446_Project1\Assignment1\Assignment1_Q3&Q4\ConsoleApp1\Self-Hosting-Client\obj\Debug\Self-Hosting-Client.pdb
