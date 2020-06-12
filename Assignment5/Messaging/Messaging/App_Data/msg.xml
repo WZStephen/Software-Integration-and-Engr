@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--CSE446 Messaging System Example-->
+<Messages xmlns="http://localhost:53750/Service1.svc">
+  <Message>
+    <SenderID>cwz</SenderID>
+    <ReceiverID>zwc</ReceiverID>
+    <TimeStamp>6/11/2020 12:02:24 PM</TimeStamp>
+    <MessageContents>hey, goodbye</MessageContents>
+    <Read>true</Read>
+  </Message>
+  <Message>
+    <SenderID>cwz</SenderID>
+    <ReceiverID>zwc</ReceiverID>
+    <TimeStamp>6/11/2020 12:02:34 PM</TimeStamp>
+    <MessageContents>I'm good</MessageContents>
+    <Read>true</Read>
+  </Message>
+  <Message>
+    <SenderID>cwz</SenderID>
+    <ReceiverID>zwc</ReceiverID>
+    <TimeStamp>6/12/2020 1:24:27 AM</TimeStamp>
+    <MessageContents>hi</MessageContents>
+    <Read>true</Read>
+  </Message>
+</Messages>

@@ -1,0 +1,79 @@
+<Activity mc:Ignorable="sap2010 sads" x:Class="WorkflowConsoleApplication1.ServiceReference2.Activities.GetRandomString" this:GetRandomString.EndpointConfigurationName="BasicHttpBinding_IService1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:p="http://tempuri.org/"
+ xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:sc="clr-namespace:System.ComponentModel;assembly=System"
+ xmlns:this="clr-namespace:WorkflowConsoleApplication1.ServiceReference2.Activities"
+ xmlns:ws="clr-namespace:WorkflowConsoleApplication1.ServiceReference2;assembly=WorkflowConsoleApplication1, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+ xmlns:ws1="clr-namespace:WorkflowConsoleApplication1.ServiceReference2;assembly=WorkflowConsoleApplication1"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="EndpointConfigurationName" Type="x:String">
+      <x:Property.Attributes>
+        <sc:DefaultValueAttribute>
+          <x:Arguments>
+            <x:String>BasicHttpBinding_IService1</x:String>
+          </x:Arguments>
+        </sc:DefaultValueAttribute>
+      </x:Property.Attributes>
+    </x:Property>
+    <x:Property Name="Length" Type="InArgument(x:String)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+    <x:Property Name="GetRandomStringResult" Type="OutArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+  <Sequence>
+    <Sequence.Variables>
+      <x:Reference>__ReferenceID1</x:Reference>
+      <x:Reference>__ReferenceID2</x:Reference>
+    </Sequence.Variables>
+    <p1:Send x:Name="__ReferenceID0" Action="http://tempuri.org/IService/GetRandomString" OperationName="GetRandomString" ServiceContractName="p:IService">
+      <p1:Send.CorrelationInitializers>
+        <p1:RequestReplyCorrelationInitializer>
+          <p1:RequestReplyCorrelationInitializer.CorrelationHandle>
+            <InArgument x:TypeArguments="p1:CorrelationHandle">
+              <VariableValue x:TypeArguments="p1:CorrelationHandle">
+                <VariableValue.Variable>
+                  <Variable x:TypeArguments="p1:CorrelationHandle" x:Name="__ReferenceID2" />
+                </VariableValue.Variable>
+              </VariableValue>
+            </InArgument>
+          </p1:RequestReplyCorrelationInitializer.CorrelationHandle>
+        </p1:RequestReplyCorrelationInitializer>
+      </p1:Send.CorrelationInitializers>
+      <p1:SendMessageContent>
+        <InArgument x:TypeArguments="ws1:GetRandomStringRequest">[New WorkflowConsoleApplication1.ServiceReference2.GetRandomStringRequest() With { .Length = Length }]</InArgument>
+      </p1:SendMessageContent>
+      <p1:Send.EndpointConfigurationName>
+        <PropertyReference x:TypeArguments="x:String" PropertyName="EndpointConfigurationName" />
+      </p1:Send.EndpointConfigurationName>
+    </p1:Send>
+    <p1:ReceiveReply Request="{x:Reference __ReferenceID0}" Action="http://tempuri.org/IService/GetRandomStringResponse">
+      <p1:ReceiveMessageContent>
+        <OutArgument x:TypeArguments="ws1:GetRandomStringResponse">
+          <VariableReference x:TypeArguments="ws1:GetRandomStringResponse">
+            <VariableReference.Variable>
+              <Variable x:TypeArguments="ws1:GetRandomStringResponse" x:Name="__ReferenceID1" Name="tempResult_ded1df9e5bf7442a82235edf71dc19cb" />
+            </VariableReference.Variable>
+          </VariableReference>
+        </OutArgument>
+      </p1:ReceiveMessageContent>
+    </p1:ReceiveReply>
+    <Assign>
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[GetRandomStringResult]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[tempResult_ded1df9e5bf7442a82235edf71dc19cb.GetRandomStringResult]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <sads:DebugSymbol.Symbol>d94BRDpcUHJvamVjdHNcU29mdHdhcmVfSW50ZWdyYXRpb25fYW5kX0VuZ3JcQXNzaWdubWVudDNcV29ya2Zsb3dDb25zb2xlQXBwbGljYXRpb24xXFdvcmtmbG93Q29uc29sZUFwcGxpY2F0aW9uMVxDb25uZWN0ZWQgU2VydmljZXNcU2VydmljZVJlZmVyZW5jZTJcV29ya2Zsb3dDb25zb2xlQXBwbGljYXRpb24xLlNlcnZpY2VSZWZlcmVuY2UyLklTZXJ2aWNlLkdldFJhbmRvbVN0cmluZy54YW1sCSADTg4CAQElBTkPAgEKOgVEFwIBB0UFTA4CAQI0QjSoAQIBDCoPLh8CAQs9C0EfAgEJSjBKcwIBBUcxR0gCAQM=</sads:DebugSymbol.Symbol>
+  </Sequence>
+</Activity>
