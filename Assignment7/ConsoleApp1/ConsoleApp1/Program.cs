@@ -14,11 +14,14 @@ namespace ConsoleApp1
 
             //Query (Question1)
             IEnumerable<Course> lines = from course in course_array where course.Subject == "IEE" && course.CourseCode >= 300 orderby course.Instructor select course;
+            int count = 0;
             Console.WriteLine("\n***IEE courses with a course number of 300 or higher***\n");
             foreach (var currentLine in lines)
             {
                 Console.WriteLine("Course title is " + currentLine.CourseTitle + "---" +"Course Instructor is " + currentLine.Instructor);
+                count++;
             }
+            Console.WriteLine("Total count: " + count);
 
             //Query (Question 2)
             // 1st: Group the courses by subjects
@@ -32,6 +35,7 @@ namespace ConsoleApp1
                                              code = CourseCodes.Key 
                                          }
                        };
+            
             Console.WriteLine("\n\n***The groups that have at least two courses in the second level group***\n");
             foreach (var line in groupedCourses)
             {
