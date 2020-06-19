@@ -13,7 +13,6 @@ public interface IService
 
 	[OperationContract]
 	[WebGet(UriTemplate = "secretNum?lower={lower}&upper={upper}", RequestFormat = WebMessageFormat.Xml, ResponseFormat = WebMessageFormat.Xml, BodyStyle = WebMessageBodyStyle.Bare)]
-
 	int SecretNumber(int lower, int upper);
 
 	[OperationContract]
