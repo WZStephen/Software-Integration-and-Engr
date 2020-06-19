@@ -28,7 +28,7 @@ namespace ConsoleApp1
             //Query
             var oneFive = from course in course_array
                           join instructor in instructor_array on course.Instructor equals instructor.InstructName
-                          where  course.CourseCode >= 200 && course.CourseCode <= 300
+                          where course.Subject == "CSE" && course.CourseCode >= 200 && course.CourseCode <= 300
                           orderby course.CourseCode
                           select new { course.Subject, course.CourseCode, course.CourseNbr, instructor.EmailAddress };
 
